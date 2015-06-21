@@ -1,0 +1,28 @@
+@import "variable";
+@import "mixin";
+
+
+@include keyframes("scale") {
+    0% {
+        @include transform(scale(0));
+        opacity: 1;
+    }
+    100% {
+        @include transform(scale(1));
+        opacity: 0;
+    }
+}
+
+.ball-scale {
+
+    > div {
+        @include balls();
+        @include global-animation();
+
+        height: 60px;
+        width: 60px;
+        
+        @include animation(scale 0.75s 0s infinite ease-in-out);
+        display: inline-block;
+    }
+}

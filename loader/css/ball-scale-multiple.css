@@ -1,0 +1,79 @@
+@-webkit-keyframes ball-scale-multiple {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes ball-scale-multiple {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-multiple\.scss}line{font-family:\0000333}}
+.ball-scale-multiple {
+  position: relative;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-multiple\.scss}line{font-family:\0000327}}
+.ball-scale-multiple > div:nth-child(1) {
+  -webkit-animation: ball-scale-multiple 1.5s -0.4s infinite ease-in-out;
+  animation: ball-scale-multiple 1.5s -0.4s infinite ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-multiple\.scss}line{font-family:\0000327}}
+.ball-scale-multiple > div:nth-child(2) {
+  -webkit-animation: ball-scale-multiple 1.5s -0.2s infinite ease-in-out;
+  animation: ball-scale-multiple 1.5s -0.2s infinite ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-multiple\.scss}line{font-family:\0000327}}
+.ball-scale-multiple > div:nth-child(3) {
+  -webkit-animation: ball-scale-multiple 1.5s 0s infinite ease-in-out;
+  animation: ball-scale-multiple 1.5s 0s infinite ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-multiple\.scss}line{font-family:\0000339}}
+.ball-scale-multiple > div {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2px;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  opacity: 0;
+  margin: 0;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}

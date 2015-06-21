@@ -1,0 +1,31 @@
+@import "variable.scss";
+@import "mixin.scss";
+
+@include keyframes("rotate") {
+    0% {
+        @include transform(scale(1) rotate(0deg));
+    }
+    50% {
+        @include transform(scale(0.6) rotate(180deg));
+    }
+    100% {
+        @include transform(scale(1) rotate(360deg));
+    }
+}
+
+.ball-clip-rotate {
+
+    > div {
+        @include balls();
+        @include global-animation();
+
+        border: 2px solid $primary-color;
+        border-bottom-color: transparent;
+        height: 25px;
+        width: 25px;
+        background: transparent !important;
+        @include animation(rotate 0.75s 0s infinite linear);
+
+        display: inline-block;
+    }
+}

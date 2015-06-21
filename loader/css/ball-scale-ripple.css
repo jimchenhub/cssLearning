@@ -1,0 +1,41 @@
+@-webkit-keyframes scale-ripple {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes scale-ripple {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/loader\/sass\/ball-scale-ripple\.scss}line{font-family:\0000317}}
+.ball-scale-ripple > div {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2px;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  height: 60px;
+  width: 60px;
+  border: 2px solid #fff;
+  background-color: transparent !important;
+  -webkit-animation: scale-ripple 1.2s 0s infinite ease-in-out;
+  animation: scale-ripple 1.2s 0s infinite ease-in-out;
+  display: inline-block;
+}

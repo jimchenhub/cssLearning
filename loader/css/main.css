@@ -1,0 +1,21 @@
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #4e4e4e;
+  color: #fff;
+  font-family: SimHei, Microsoft Yahei, sans-serif;
+}
+
+main {
+  width: 90%;
+  height: auto;
+  margin: 4em auto;
+}
+
+.loader {
+  max-width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}

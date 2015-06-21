@@ -1,0 +1,52 @@
+@import "variable";
+@import "mixin";
+@import "function";
+
+$size: 60px;
+
+@include keyframes("ball-scale-multiple") {
+    0% {
+        @include transform(scale(0));
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    80% {
+        @include transform(scale(1));
+        opacity: 0.1;
+    }
+    100% {
+        @include transform(scale(1));
+        opacity: 0;
+    }
+}
+
+@mixin ball-scale-multiple($n: 3, $start: 1){
+    @for $i from $start through $n {
+        > div:nth-child(#{$i}) {
+            @include animation(ball-scale-multiple 1.5s delay(0.2s, $n, $i) infinite ease-in-out);
+        }
+    }
+}
+
+.ball-scale-multiple {
+    @include ball-scale-multiple();
+
+    position: relative;
+    @include transform(translateY(-$size / 2));
+    
+    > div {
+        @include balls();
+        @include global-animation();
+
+        position: absolute;
+        left: -30px;
+        top: 0px;
+        opacity: 0;
+        margin: 0;
+        height: $size;
+        width: $size;
+        display: inline-block;
+    }
+}
