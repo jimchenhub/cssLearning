@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>list</title>
+    <style type="text/css">
+        .dropdown {
+            margin-bottom: -5px;
+            width: 200px;
+            padding: 20px;
+            color: #eee;
+            list-style: none;
+        }
+        .dropdown:nth-child(odd) {
+            background: #a5a5a5;
+            transform: perspective(1000px) rotateX(-20deg);
+            -webkit-transform: perspective(1000px) rotateX(-20deg);
+            transform-origin: top;
+            -webkit-transform-origin: top;
+            animation-name: showList-odd;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-name: showList-odd;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+        .dropdown:nth-child(1){ animation-delay: 0s; -webkit-animation-delay: 0s; }
+        .dropdown:nth-child(3){ animation-delay: 2s; -webkit-animation-delay: 2s; }
+        .dropdown:nth-child(even) {
+            background: #b1b1b1;
+            margin-left: 2px;
+            width: 196px;
+            transform: perspective(1000px) rotateX(20deg);
+            -webkit-transform: perspective(1000px) rotateX(20deg);
+            transform-origin: top;
+            -webkit-transform-origin: top;
+            animation-name: showList-even;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-name: showList-even;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+        }
+        .dropdown:nth-child(2){ animation-delay: 1s; -webkit-animation-delay: 1s;}
+        .dropdown:nth-child(4){ animation-delay: 3s; -webkit-animation-delay: 3s;}
+
+        @keyframes showList-even {
+            0% {
+                transform: perspective(1000px) rotateX(90deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateX(20deg);
+            }
+        }
+        @-webkit-keyframes showList-even {
+            0% {
+                -webkit-transform: perspective(1000px) rotateX(90deg);
+            }
+            100% {
+                -webkit-transform: perspective(1000px) rotateX(20deg);
+            }
+        }
+
+        @keyframes showList-odd {
+            0% {
+                transform: perspective(1000px) rotateX(-90deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateX(-20deg);
+            }
+        }
+        @-webkit-keyframes showList-odd {
+            0% {
+                -webkit-transform: perspective(1000px) rotateX(-90deg);
+            }
+            100% {
+                -webkit-transform: perspective(1000px) rotateX(-20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="dropdown">one</li>
+        <li class="dropdown">two</li>
+        <li class="dropdown">three</li>
+        <li class="dropdown">four</li>
+    </ul>
+</body>
+</html>

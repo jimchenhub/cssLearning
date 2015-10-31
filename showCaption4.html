@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <title>show caption slowly</title>
+    <style type="text/css">
+        @keyframes captionAnimation {
+            0% { opacity: 0; animation-timing-function: ease-in;}
+            5% { opacity: 1; }
+            30% {
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+            34% {
+                opacity: 1;
+                transform: rotate(98deg);
+            }
+            38% {
+                opacity: 1;
+                transform: rotate(86deg);
+            }
+            40% {
+                opacity: 1;
+                transform: rotate(86deg);
+            }
+            44% {
+                opacity: 1;
+                transform: translateY(85px) rotate(83deg);
+            }
+            48% {
+                opacity: 0;
+                transform: translateY(175px) rotate(80deg);
+            }
+            100% { opacity: 0; }
+        }
+        @-webkit-keyframes captionAnimation {
+
+        }
+
+        .caption {
+            position: absolute;
+            opacity: 0;
+            animation: captionAnimation 8s linear infinite 0s;
+            transform-origin: 10% 75%;
+            -webkit-transform-origin: 10% 75%;
+            color: #333;
+            font-size: 200%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="caption">This is content</p>
+</body>
+</html>

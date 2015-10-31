@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    #wrap {
+        width: 200px;
+        margin: 100px auto;
+        background-color: #000;
+        padding: 5px 20px;
+
+        animation: open 1s linear;
+        -webkit-animation: open 1s linear;
+    }
+    #wrap #content {
+        width: 200px;
+        color: #fff;
+        font: 20px 'Helvetica';
+        text-align: center;
+
+        animation: show 1.5s ease-in-out;
+        -webkit-animation: show 1.5s ease-in-out;
+    }
+
+    @keyframes open {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 240px;
+        }
+    }
+
+    @-webkit-keyframes open {
+        from {
+            width: 0;
+        }
+        to {
+            width: 240px;
+        }
+    }
+
+    @keyframes show {
+        0% {
+            
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p id="content">This is the content</p>
+    </div>
+</body>
+</html>
