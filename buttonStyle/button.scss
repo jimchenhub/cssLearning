@@ -15,6 +15,7 @@ button.button {
     display: block;
     position: relative;
     width: 33.33%;
+    max-width: 300px !important;
     margin: 50px auto;
     padding: 0;
     color: #37474f;
@@ -203,6 +204,221 @@ button.button {
 
         &:after {
             transform: translate3d(0, 100%, 0);
+        }
+    }
+}
+
+#button-4 {
+    padding: 16px 32px;
+    background-color: #37474f;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    border-radius: 30px;
+    border: none;
+    z-index: 1;
+    overflow: visible;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        bottom: -20px;
+        right: -20px;
+        background-color: #37474f;
+        border-radius: 30px;
+        z-index: -1;
+        opacity: 0.4;
+        transform: scale3d(0.8, 0.5, 1);
+        -webkit-transform: scale3d(0.8, 0.5, 1);
+    }
+
+    &:hover {
+        animation: button4-animation-1 $animationDuration forwards;
+        -webkit-animation: button4-animation-1 $animationDuration forwards;
+
+        &:before {
+            animation: button4-animation-2 $animationDuration $animationDuration forwards;
+            -webkit-animation: button4-animation-2 $animationDuration $animationDuration forwards;
+        }
+    }
+}
+
+@-webkit-keyframes button4-animation-1 {
+    60% {
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        transform: scale3d(0.8, 0.8, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes button4-animation-1 {
+    60% {
+        -webkit-transform: scale3d(0.8, 0.8, 1);
+        transform: scale3d(0.8, 0.8, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes button4-animation-2 {
+    0% {
+        opacity: 0.4;
+        transform: scale3d(0.8, 0.5, 1);
+        -webkit-transform: scale3d(0.8, 0.5, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes button4-animation-2 {
+    0% {
+        opacity: 0.4;
+        transform: scale3d(0.8, 0.5, 1);
+        -webkit-transform: scale3d(0.8, 0.5, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+#button-5 {
+    padding: 16px 32px;
+    background-color: #37474f;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    border: none;
+    transition: background-color $animationDuration;
+    -webkit-transition: background-color $animationDuration;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+    &:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 16px 32px;
+        vertical-align: middle;
+        opacity: 0;
+        background-color: #7986cb;
+        transition: transform $animationDuration, opacity $animationDuration;
+        -webkit-transition: -webkit-transform $animationDuration, opacity $animationDuration;
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transform-origin: -25% 50%;
+        -webkit-transform-origin: -25% 50%;
+        transform: rotate3d(0, 0, 1, 45deg);
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    &:hover {
+        background-color: #7986cb;
+
+        &:after {
+            opacity: 1;
+            transform: rotate3d(0, 0, 1, 0deg);
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        }
+    }
+}
+
+#button-6 {
+    border: none;
+
+    span {
+        transition: transform $animationDuration, opacity 0.1s;
+        -webkit-transition: -webkit-transform $animationDuration, opacity 0.1s;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        -webkit-transition-delay: 0.3s;
+        transition-delay: 0.3s;
+    }
+
+    .button_icon {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        padding: 16px 32px;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transition: -webkit-transform $animationDuration;
+        transition: transform $animationDuration;
+        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #37474f;
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 35% 100%, 35% 90%, 65% 90%, 65% 100%, 100% 100%, 100% 0%);
+        transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+        -webkit-transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+
+        transition: transform $animationDuration;
+        -webkit-transition: -webkit-transform $animationDuration;
+        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+
+    &:hover {
+
+        span {
+            opacity: 0;
+            transform: translate3d(0, -50%, 0);
+            -webkit-transform: translate3d(0, -50%, 0);
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+
+        .button_icon {
+            -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+            -webkit-transform: translate3d(-50%, -100%, 0);
+            transform: translate3d(-50%, -100%, 0);
+        }
+
+        &:before {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            transition-delay: 0s;
+            -webkit-transition-delay: 0s;
         }
     }
 }
