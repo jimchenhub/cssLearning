@@ -1,0 +1,25 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/one_div\/prepare\.scss}line{font-family:\000033}}
+div {
+  margin: 100px auto;
+  height: 80px;
+  width: 400px;
+  background: #237449;
+  background-image: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.6) 80px, transparent 84px), linear-gradient(to right, transparent 40px, rgba(0, 0, 0, 0.6) 40px, rgba(0, 0, 0, 0.6) 50px, transparent 50px, transparent 60px, rgba(0, 0, 0, 0.6) 60px, rgba(0, 0, 0, 0.6) 70px, transparent 70px, transparent 330px, rgba(0, 0, 0, 0.6) 330px, rgba(0, 0, 0, 0.6) 340px, transparent 340px, transparent 350px, rgba(0, 0, 0, 0.6) 350px, rgba(0, 0, 0, 0.6) 360px, transparent 360px), linear-gradient(to right, transparent 20px, rgba(41, 237, 133, 0.6) 20px, rgba(41, 237, 133, 0.6) 380px, transparent 380px), linear-gradient(to bottom, transparent 62%, rgba(0, 0, 0, 0.3) 100%);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/one_div\/prepare\.scss}line{font-family:\0000341}}
+div:before, div:after {
+  content: "";
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/chenlvjie\/Documents\/GitHub\/cssLearning\/one_div\/prepare\.scss}line{font-family:\0000346}}
+div:before {
+  position: relative;
+  top: 3px;
+  left: -88px;
+  height: 30px;
+  border-right: 88px solid #237449;
+  border-bottom: 22px solid transparent;
+  border-top: 22px solid transparent;
+  background-image: linear-gradient(to bottom, transparent 62%, rgba(0, 0, 0, 0.3) 100%);
+}
